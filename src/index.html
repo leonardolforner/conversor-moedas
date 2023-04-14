@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Conversor de Moedas</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Conversor de Moedas</h1>
+    <form>
+      <label for="fromCurrency">De:</label>
+      <select id="fromCurrency" name="fromCurrency">
+        <option value="USD">Dólar Americano (USD)</option>
+        <option value="EUR">Euro (EUR)</option>
+        <option value="GBP">Libra Esterlina (GBP)</option>
+        <!-- Adicione mais opções de moedas aqui -->
+      </select>
+      <input type="number" id="fromAmount" placeholder="Valor a ser convertido">
+
+      <label for="toCurrency">Para:</label>
+      <select id="toCurrency" name="toCurrency">
+        <option value="USD">Dólar Americano (USD)</option>
+        <option value="EUR">Euro (EUR)</option>
+        <option value="GBP">Libra Esterlina (GBP)</option>
+        <!-- Adicione mais opções de moedas aqui -->
+      </select>
+      <input type="number" id="toAmount" placeholder="Valor convertido" disabled>
+
+      <button type="button" id="convertBtn">Converter</button>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
