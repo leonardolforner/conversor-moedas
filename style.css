@@ -1,0 +1,28 @@
+body{
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 30%
+    font-weight: bolder;
+    border: 10px double black;
+    
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+form {
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 0%;
+}
+
+h1{
+    background-color: white;
+    margin: 0%;
+}
+
+.result {
+
+background-color: white;
+}
+    
