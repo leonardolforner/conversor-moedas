@@ -50,27 +50,9 @@
     <br>
     <label for="output">Resultado:</label>
     <input type="text" id="output" disabled>
+    <button id="btnTrade" onclick="trocar()">Trocar</button>
     
-    <script>
-      function converter() {
-        const input = document.getElementById("input").value;
-        const de = document.getElementById("de").value;
-        const para = document.getElementById("para").value;
-        const appId = "f8552fa4d2f8449fb8d9c832a112caa7"; // substituir pela sua chave de API do Open Exchange Rates
-        
-        fetch(`https://openexchangerates.org/api/latest.json?app_id=${appId}&base=${"USD"}`)
-          .then(response => response.json())
-          .then(data => {
-            const taxa1 = data.rates[de];
-            const taxa2 = data.rates[para];
-            const taxaFinal = (taxa2/taxa1)
-            const resultado = (input * taxaFinal).toFixed(2);
-
-
-            document.getElementById("output").value = resultado;
-          })
-          .catch(error => console.log(error));
-      }
-    </script>
+    <script src="converter.js"></script>
+    <script src="btnTrade.js"></script>
   </body>
 </html>
