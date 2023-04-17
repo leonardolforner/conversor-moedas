@@ -9,10 +9,11 @@ function converter() {
       .then(data => {
         const taxa1 = data.rates[de];
         const taxa2 = data.rates[para];
-        const taxaFinal = (taxa2/taxa1)
+        const taxaFinal = (taxa2/taxa1);
         const resultado = (input * taxaFinal).toFixed(2);
 
-
+        
+        document.getElementById("rate").innerHTML = taxaFinal;
         document.getElementById("output").value = resultado;
       })
       .catch(error => console.log(error));
