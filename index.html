@@ -1,30 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <title>Conversor de Moedas</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>Conversor de Moeda</title>
   </head>
   <body>
-    <h1> &#129297; Conversor de Moedas &#129297; </h1>
-    <form>
-      <input type="text" id="amount" placeholder="Insira o valor..." />
-      <select id="from_currency">
-        <option value="USD"><a href='https://emojitool.com/pt/flag-for-united-states'>🇺🇸</a> Dólar Americano (USD)</option>
-        <option value="EUR"><a href='https://emojitool.com/pt/flag-for-european-union'>🇪🇺</a> Euro (EUR)</option>
-        <option value="GBP"><a href='https://emojitool.com/pt/flag-for-united-kingdom'>🇬🇧</a> Libra Esterlina (GBP)</option>
-        <option value="BRL"><a href='https://emojitool.com/pt/flag-for-brazil'>🇧🇷</a> Real Brasileiro (BRL)</option>
-      </select>
-      <select id="to_currency">
-        <option value="USD"> <a href='https://emojitool.com/pt/flag-for-united-states'>🇺🇸</a> Dólar Americano (USD)</option>
-        <option value="EUR"><a href='https://emojitool.com/pt/flag-for-european-union'>🇪🇺</a> Euro (EUR)</option>
-        <option value="GBP"><a href='https://emojitool.com/pt/flag-for-united-kingdom'>🇬🇧</a> Libra Esterlina (GBP)</option>
-        <option value="BRL"><a href='https://emojitool.com/pt/flag-for-brazil'>🇧🇷</a> Real Brasileiro (BRL)</option>
-      </select>
-      <button id="converter">Converter</button>
-    </form>
-    <div id="result"></div>
-
-    <script type="module" src="./src/main.js"></script>
+    <h1>Conversor de Moeda</h1>
+    <label for="input">Valor:</label>
+    <input type="number" id="input" oninput="converter()">
+    <br>
+    <label for="de">De:</label>
+    <select id="de" onchange="converter()">
+      <option value="USD">USD - Dólar Americano</option>
+      <option value="EUR">EUR - Euro</option>
+      <option value="GBP">GBP - Libra Esterlina</option>
+    </select>
+    <br>
+    <label for="para">Para:</label>
+    <select id="para" onchange="converter()">
+      <option value="USD">USD - Dólar Americano</option>
+      <option value="EUR">EUR - Euro</option>
+      <option value="GBP">GBP - Libra Esterlina</option>
+    </select>
+    <br>
+    <label for="output">Resultado:</label>
+    <input type="text" id="output" disabled>
+    
+    <script>
+      function converter() {
+        const input = document.getElementById("input").value;
+        const de = document.getElementById("de").value;
+        const para = document.getElementById("para").value;
+        const appId = "f8552fa4d2f8449fb8d9c832a112caa7"; // substituir pela sua chave de API do Open Exchange Rates
+        
+        fetch(`https://openexchangerates.org/api/latest.json?app_id=${appId}&base=${de}`)
+          .then(response => response.json())
+          .then(data => {
+            const taxa = data.rates[para];
+            const resultado = (input * taxa).toFixed(2);
+            document.getElementById("output").value = resultado;
+          })
+          .catch(error => console.log(error));
+      }
+    </script>
   </body>
 </html>
