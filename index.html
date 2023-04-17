@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Conversor de Moeda</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <h1>Conversor de Moeda</h1>
@@ -57,11 +58,15 @@
         const para = document.getElementById("para").value;
         const appId = "f8552fa4d2f8449fb8d9c832a112caa7"; // substituir pela sua chave de API do Open Exchange Rates
         
-        fetch(`https://openexchangerates.org/api/latest.json?app_id=${appId}&base=${de}`)
+        fetch(`https://openexchangerates.org/api/latest.json?app_id=${appId}&base=${"USD"}`)
           .then(response => response.json())
           .then(data => {
-            const taxa = data.rates[para];
-            const resultado = (input * taxa).toFixed(2);
+            const taxa1 = data.rates[de];
+            const taxa2 = data.rates[para];
+            const taxaFinal = (taxa2/taxa1)
+            const resultado = (input * taxaFinal).toFixed(2);
+
+
             document.getElementById("output").value = resultado;
           })
           .catch(error => console.log(error));
