@@ -4,34 +4,17 @@
     <meta charset="utf-8">
     <title>Conversor de Moeda</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Outfit&display=swap');
+    </style>
   </head>
   <body>
     <h1>Conversor de Moeda</h1>
-    <label for="input">Valor:</label>
-    <input type="number" id="input" oninput="converter()">
-    <br>
-    <label for="de">De:</label>
-    <select id="de" onchange="converter()">
-      <option value="USD">Dólar Americano</option>
-      <option value="BRL">Real Brasileiro</option>
-      <option value="EUR">Euro</option>
-      <option value="JPY">Iene Japonês</option>
-      <option value="GBP">Libra Esterlina</option>
-      <option value="CAD">Dólar Canadense</option>
-      <option value="AUD">Dólar Australiano</option>
-      <option value="CHF">Franco Suíço</option>
-      <option value="CNY">Yuan Chinês</option>
-      <option value="HKD">Dólar de Hong Kong</option>
-      <option value="NZD">Dólar da Nova Zelândia</option>
-      <option value="SEK">Coroa Sueca</option>
-      <option value="KRW">Won Sul-Coreano</option>
-      <option value="MXN">Peso Mexicano</option>
-      <option value="SGD">Dólar de Singapura</option>
-    </select>
-    <br>
-    <label for="para">Para:</label>
-    <select id="para" onchange="converter()">
-      <option value="USD">Dólar Americano</option>
+    <div class="app">
+    <div class="firstLine"></div>
+      <label for="de">De:</label>
+      <select id="de" onchange="converter()">
+        <option value="USD">Dólar Americano</option>
         <option value="BRL">Real Brasileiro</option>
         <option value="EUR">Euro</option>
         <option value="JPY">Iene Japonês</option>
@@ -46,21 +29,45 @@
         <option value="KRW">Won Sul-Coreano</option>
         <option value="MXN">Peso Mexicano</option>
         <option value="SGD">Dólar de Singapura</option>
-    </select>
-    <br>
-    <label for="output">Resultado:</label>
-    <input type="text" id="output" disabled>
-    <div class = "rateBox"> 
+      </select>
+      
+      <button id="btnTrade" onclick="trocar()">Trocar</button>
+
+      <label for="para">Para:</label>
+      <select id="para" onchange="converter()">
+        <option value="USD">Dólar Americano</option>
+          <option value="BRL">Real Brasileiro</option>
+          <option value="EUR">Euro</option>
+          <option value="JPY">Iene Japonês</option>
+          <option value="GBP">Libra Esterlina</option>
+          <option value="CAD">Dólar Canadense</option>
+          <option value="AUD">Dólar Australiano</option>
+          <option value="CHF">Franco Suíço</option>
+          <option value="CNY">Yuan Chinês</option>
+          <option value="HKD">Dólar de Hong Kong</option>
+          <option value="NZD">Dólar da Nova Zelândia</option>
+          <option value="SEK">Coroa Sueca</option>
+          <option value="KRW">Won Sul-Coreano</option>
+          <option value="MXN">Peso Mexicano</option>
+          <option value="SGD">Dólar de Singapura</option>
+      </select>
+    </div>
+    <div class="secondLine">
+      <label for="input">Valor:</label>
+      <input type="number" id="input" oninput="converter()">
+      
+      <label for="output">Resultado:</label>
+      <input type="text" id="output" disabled>
+    </div>
+    <div class = "thirdLine"> 
       <h1 class="rateText">Rate</h1>
       <div class="totalRate">
         <p>1 -></p>
         <p id="rate" class="rateValue"> </p>
-      </div>
-       
+      </div>       
     </div>
-    
-    <button id="btnTrade" onclick="trocar()">Trocar</button>
-    
+    </div> 
+
     <script src="converter.js"></script>
     <script src="btnTrade.js"></script>
   </body>
