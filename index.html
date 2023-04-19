@@ -14,7 +14,7 @@
       <div class="app">
         <div class="firstLine">
           <div class="barras">
-            <label for="de">De:</label>
+            <label for="de">De</label>
             <select id="de" onchange="converter()">
               <option value="USD">Dólar Americano</option>
               <option value="BRL">Real Brasileiro</option>
@@ -35,7 +35,7 @@
           </div>
           <button id="btnTrade" onclick="trocar()">Trocar</button>
           <div class="barras">
-            <label for="para">Para:</label>
+            <label for="para">Para</label>
             <select id="para" onchange="converter()">
               <option value="USD">Dólar Americano</option>
                 <option value="BRL">Real Brasileiro</option>
@@ -62,14 +62,16 @@
           <label for="output">Resultado:</label>
           <input type="text" id="output" placeholder="Resultado" disabled>
         </div>
-        <div class = "thirdLine"> 
+        
+      </div>
+      <div class = "thirdLine"> 
           <h1 class="rateText">Rate</h1>
           <div class="totalRate">
             <p>1 -></p>
             <p id="rate" class="rateValue"> </p>
           </div>       
         </div>
-      </div> 
+      
     </div>  
     <script src="converter.js"></script>
     <script src="btnTrade.js"></script>
