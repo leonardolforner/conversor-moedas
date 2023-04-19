@@ -1,5 +1,5 @@
 body {
-  background-color: #f5f5f5;
+  background-color: #304c89;
   font-family: 'Montserrat', sans-serif;
   display: flex;
   justify-content: center;
@@ -8,12 +8,12 @@ body {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 50px;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 33px;
 }
 
-.app {
+.appAndLogo {
   background-color: #fff;
   padding: 30px;
   border-radius: 5px;
@@ -24,6 +24,17 @@ h1 {
   align-items: center;
   max-width: 600px;
   width: 100%;
+}
+.app{
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 98%;
 }
 
 select, input[type=number], input[type=text], button {
@@ -48,17 +59,18 @@ select {
 
 button {
   cursor: pointer;
-  background-color: #49c1a2;
+  background-color: #7192be;
   color: #fff;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #2c7f68;
+  background-color: #304c89;
 }
 
 input[type=number], input[type=text] {
   font-weight: bold;
+  
 }
 
 input[type=text] {
@@ -73,7 +85,8 @@ input[type=text] {
 .totalRate {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  width: 60%;
   font-size: 18px;
   font-weight: bold;
   margin-top: 10px;
@@ -93,20 +106,31 @@ input[type=text] {
   display: flex;
   justify-content: center;
   align-items: center;
+  
   margin: 10px;
 }
 
 .firstLine {
   width: 100%;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #7192be;
   margin-bottom: 20px;
 }
 
 .thirdLine {
-  border-top: 2px solid #ccc;
+  border-top: 2px solid #7192be;
   margin-top: 20px;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
 }
 
 option {
   font-weight: bold;
+}
+
+.barras {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
 }

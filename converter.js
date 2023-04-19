@@ -13,7 +13,7 @@ function converter() {
         const resultado = (input * taxaFinal).toFixed(2);
 
         
-        document.getElementById("rate").innerHTML = taxaFinal;
+        document.getElementById("rate").innerHTML = taxaFinal.toFixed(2);
         document.getElementById("output").value = resultado;
       })
       .catch(error => console.log(error));
