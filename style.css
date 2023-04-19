@@ -1,6 +1,10 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+}
 body {
   background-color: #304c89;
-  font-family: 'Montserrat', sans-serif;
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,9 +31,12 @@ h1 {
 }
 .app{
   background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 200;
   padding: 30px;
   border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,6 +68,7 @@ button {
   cursor: pointer;
   background-color: #7192be;
   color: #fff;
+  padding: 10px 5px 10px 5px;
   transition: background-color 0.3s ease;
 }
 
@@ -69,37 +77,30 @@ button:hover {
 }
 
 input[type=number], input[type=text] {
-  font-weight: bold;
-  
+  background-color: white;
+  font-size: 36px;
+  border-bottom: 2px solid #7192be;
+  border-radius: 0px;
+  box-shadow: none;
 }
-
-input[type=text] {
-  background-color: #f1f1f1;
+input[type=text]{
+  border-bottom: 2px solid black;
 }
 
 .rateText {
   font-size: 24px;
   margin-top: 20px;
 }
-
-.totalRate {
+.rateAndArrow{
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  width: 60%;
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 10px;
 }
 
-.totalRate p {
-  margin: 0px;
-  margin-right: 5px;
-}
-
-.rateValue {
-  font-size: 28px;
-  margin: 0px;
+.rateAndArrow img{
+  transform: rotate(180deg);
+  width: 60px;
+  height: auto;
 }
 
 .firstLine, .secondLine, .thirdLine {
@@ -112,16 +113,19 @@ input[type=text] {
 
 .firstLine {
   width: 100%;
-  border-bottom: 2px solid #7192be;
   margin-bottom: 20px;
 }
-
-.thirdLine {
-  
-  margin-top: 20px;
-  flex-direction: column;
-  width: 100%;
+.secondLine{
   justify-content: space-between;
+  width: 100%;
+}
+
+.thirdLine {  
+  margin-top: 0px;
+  flex-direction: row;
+  width: 40%;
+  justify-content:space-between;
+  font-size: 38px;
 }
 
 option {

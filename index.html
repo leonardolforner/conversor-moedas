@@ -5,7 +5,7 @@
     <title>Conversor de Moeda</title>
     <link rel="stylesheet" href="style.css">
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Outfit&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&family=Outfit&family=Roboto&display=swap');
     </style>
   </head>
   <body>
@@ -56,22 +56,20 @@
           </div>
         </div>
         <div class="secondLine">
-          <label for="input">Valor:</label>
-          <input type="number" id="input" placeholder="Valor" oninput="converter()">
-          
-          <label for="output">Resultado:</label>
+          <input type="number" id="input" placeholder="Valor" oninput="converter()">          
           <input type="text" id="output" placeholder="Resultado" disabled>
         </div>
         
       </div>
+
+      <h1 class="rateText">RATE</h1>
       <div class = "thirdLine"> 
-          <h1 class="rateText">Rate</h1>
-          <div class="totalRate">
-            <p>1 -></p>
-            <p id="rate" class="rateValue"> </p>
-          </div>       
-        </div>
-      
+          <p>1</p>
+          <div class="rateAndArrow">            
+            <img src="images/arrow.png" alt="arrow" class="arrow">
+          </div>
+          <p id="rate" class="rateValue"> </p>       
+      </div>      
     </div>  
     <script src="converter.js"></script>
     <script src="btnTrade.js"></script>
