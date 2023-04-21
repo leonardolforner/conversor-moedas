@@ -103,6 +103,9 @@ input[type=number]::placeholder, input[type=text]::placeholder{
 input[type=text]{
   cursor: default;
 }
+input[type=number]:focus::placeholder{
+  color: transparent;
+}
 
 .rateText {
   font-size: 24px;
