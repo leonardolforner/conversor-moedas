@@ -80,23 +80,24 @@ button:hover {
   cursor: pointer;
   transition: 0.2s;
 }
-}
+
 
 input[type=number], input[type=text] {
   background-color: white;
   font-size: 36px;
-  border-bottom: 2px solid #7192be;
-  border-radius: 0px;
+  border-bottom: 2px solid black;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   box-shadow: none;
   cursor: pointer;
   background-color: #7192be;
   color: #fff;
   padding: 10px 5px 10px 5px;
   transition: background-color 0.3s ease;
+  
 }
-}
-input[type=text]{
-  border-bottom: 2px solid black;
+input[type=number]::placeholder, input[type=text]::placeholder{
+  color: white;
 }
 
 .rateText {
