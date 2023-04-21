@@ -63,6 +63,7 @@ select {
   background-repeat: no-repeat;
   background-position: right center;
   background-size: 20px;
+  cursor: pointer;
 }
 
 button {
@@ -98,6 +99,9 @@ input[type=number], input[type=text] {
 }
 input[type=number]::placeholder, input[type=text]::placeholder{
   color: white;
+}
+input[type=text]{
+  cursor: default;
 }
 
 .rateText {
